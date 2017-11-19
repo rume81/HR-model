@@ -163,7 +163,7 @@ public class EmpMapper extends BaseMapper implements RowMapper<HEmployee> {
 	
 	colindex = findColumn(rs, "reporting_manager");
 	if (colindex > 0) {
-	    emp.setRpt_mgr(rs.getString(colindex));
+	    emp.setRpt_mgr(rs.getInt(colindex));
 	}
 	
 	colindex = findColumn(rs, "education");
@@ -270,6 +270,37 @@ public class EmpMapper extends BaseMapper implements RowMapper<HEmployee> {
 	    HUpload nda = new HUpload();
 	    nda.setPath(rs.getString(colindex));
 	    emp.setNda(nda);
+	}
+	
+	colindex = findColumn(rs, "jobtitle");
+	if (colindex > 0) {
+	    emp.setJobtitle(rs.getString(colindex));
+	}
+	
+	colindex = findColumn(rs, "jobnature");
+	if (colindex > 0) {
+	    emp.setJobnature(rs.getString(colindex));
+	}
+	
+	colindex = findColumn(rs, "workstation");
+	if (colindex > 0) {
+	    emp.setWorkstation(rs.getString(colindex));
+	}
+	
+	colindex = findColumn(rs, "responsiblefor");
+	if (colindex > 0) {
+	    emp.setResponsiblefor(rs.getString(colindex));
+	}
+	
+	colindex = findColumn(rs, "probation_period");
+	if (colindex > 0) {
+	    emp.setProbation_period(rs.getString(colindex));
+	}
+	
+	
+	colindex = findColumn(rs, "job_desc");
+	if (colindex > 0) {
+	    emp.setJob_desc(rs.getString(colindex));
 	}
 	
 	return emp;

@@ -27,11 +27,11 @@ public class HEmployee extends HObject {
 	private String designation2;
 	private String refferal_no;
 	private String prv_work_place;
-	private String rpt_mgr;
+	private int rpt_mgr;
 	private String present_address;
 	private String permanent_address;
 	private String about_me;
-	private String office_location;
+	//private String office_location;
 	private String passport;
 	private String maritial_status;
 	private Integer no_siblings;
@@ -54,6 +54,13 @@ public class HEmployee extends HObject {
 	private HUpload appointment;
 	private HUpload nda;
 	
+	private String jobtitle;
+	private String jobnature;
+	private String workstation;
+	private String responsiblefor;
+	private String probation_period;
+	
+	private String job_desc;
 	
 	public HEmployee(){
 	
@@ -190,12 +197,20 @@ public class HEmployee extends HObject {
 	public void setPrv_work_place(String prv_work_place) {
 	    this.prv_work_place = prv_work_place;
 	}
-	public String getRpt_mgr() {
+	
+	public int getRpt_mgr() {
 	    return rpt_mgr;
 	}
-	public void setRpt_mgr(String rpt_mgr) {
+	public void setRpt_mgr(int rpt_mgr) {
 	    this.rpt_mgr = rpt_mgr;
 	}
+	public String getJob_desc() {
+	    return job_desc;
+	}
+	public void setJob_desc(String job_desc) {
+	    this.job_desc = job_desc;
+	}
+	
 	public String getPresent_address() {
 	    return present_address;
 	}
@@ -214,12 +229,12 @@ public class HEmployee extends HObject {
 	public void setAbout_me(String about_me) {
 	    this.about_me = about_me;
 	}
-	public String getOffice_location() {
+	/*public String getOffice_location() {
 	    return office_location;
 	}
 	public void setOffice_location(String office_location) {
 	    this.office_location = office_location;
-	}
+	}*/
 	public String getPassport() {
 	    return passport;
 	}
@@ -354,6 +369,37 @@ public class HEmployee extends HObject {
 	public void setNda(HUpload nda) {
 	    this.nda = nda;
 	}
+	public String getJobtitle() {
+	    return jobtitle;
+	}
+	public void setJobtitle(String jobtitle) {
+	    this.jobtitle = jobtitle;
+	}
+	public String getJobnature() {
+	    return jobnature;
+	}
+	public void setJobnature(String jobnature) {
+	    this.jobnature = jobnature;
+	}
+	public String getWorkstation() {
+	    return workstation;
+	}
+	public void setWorkstation(String workstation) {
+	    this.workstation = workstation;
+	}
+	public String getResponsiblefor() {
+	    return responsiblefor;
+	}
+	public void setResponsiblefor(String responsiblefor) {
+	    this.responsiblefor = responsiblefor;
+	}
+	public String getProbation_period() {
+	    return probation_period;
+	}
+	public void setProbation_period(String probation_period) {
+	    this.probation_period = probation_period;
+	}
+	
 	public void escapeEcmaScript()
 	{
 	    employee_name = StringEscapeUtils.escapeEcmaScript(employee_name);
@@ -373,11 +419,10 @@ public class HEmployee extends HObject {
 	    last_name = StringEscapeUtils.escapeEcmaScript(last_name);
 	    refferal_no = StringEscapeUtils.escapeEcmaScript(refferal_no);
 	    prv_work_place = StringEscapeUtils.escapeEcmaScript(prv_work_place);
-	    rpt_mgr = StringEscapeUtils.escapeEcmaScript(rpt_mgr);
 	    present_address = StringEscapeUtils.escapeEcmaScript(present_address);
 	    permanent_address = StringEscapeUtils.escapeEcmaScript(permanent_address);
 	    about_me = StringEscapeUtils.escapeEcmaScript(about_me);
-	    office_location = StringEscapeUtils.escapeEcmaScript(office_location);
+	    //office_location = StringEscapeUtils.escapeEcmaScript(office_location);
 	    passport = StringEscapeUtils.escapeEcmaScript(passport);
 	    maritial_status = StringEscapeUtils.escapeEcmaScript(maritial_status);
 	    hobbies = StringEscapeUtils.escapeEcmaScript(hobbies);
@@ -389,5 +434,11 @@ public class HEmployee extends HObject {
 	    extension = StringEscapeUtils.escapeEcmaScript(extension);
 	    emergency_phone = StringEscapeUtils.escapeEcmaScript(emergency_phone);
 	    relation = StringEscapeUtils.escapeEcmaScript(relation);
+	    jobtitle = StringEscapeUtils.escapeEcmaScript(jobtitle);
+	    jobnature = StringEscapeUtils.escapeEcmaScript(jobnature);
+	    workstation = StringEscapeUtils.escapeEcmaScript(workstation);
+	    responsiblefor = StringEscapeUtils.escapeEcmaScript(responsiblefor);
+	    probation_period = StringEscapeUtils.escapeEcmaScript(probation_period);
+	    
 	}
 }
